@@ -35,10 +35,29 @@ const DeleteExample = () => {
 
   const [movies, setMovies] = useState(preset)
 
+  const deleteMovie = (idMovie)=>{
+    console.log("delete movie", idMovie)
+  }
+
   return (
     <form>
       <div>
         <h1>Delete example</h1>
+        <div>
+          {
+            movies.map((x) =>{
+              return(
+                <div>{x.name }
+                {x.movie}
+
+                <button onClick={(e)=>{deleteMovie(x.id)}}>Delete</button>
+                </div>
+                
+              )
+            })
+          }
+        </div>
+
 
 
       </div>
