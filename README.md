@@ -1,6 +1,6 @@
 # delete-example
 
-## Brief summary of the application
+## **Brief summary of the application**
 
 ## A *preset* variable is defined that contains dummy data related to films and actors
 
