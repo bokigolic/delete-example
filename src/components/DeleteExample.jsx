@@ -35,8 +35,18 @@ const DeleteExample = () => {
 
   const [movies, setMovies] = useState(preset)
 
-  const deleteMovie = (idMovie)=>{
-    console.log("delete movie", idMovie)
+  const deleteMovie = (idMovie) => {
+    console.log("deleted movie", idMovie)
+
+    const newList = movies.filter((x) => {
+      if (x.id === idMovie) {
+        return false
+
+
+      }
+      return true
+    })
+    setMovies(newList)
   }
 
   return (
@@ -45,14 +55,17 @@ const DeleteExample = () => {
         <h1>Delete example</h1>
         <div>
           {
-            movies.map((x) =>{
-              return(
-                <div>{x.name }
-                {x.movie}
+            movies.map((x) => {
+              return (
 
-                <button onClick={(e)=>{deleteMovie(x.id)}}>Delete</button>
+                <div key={x.id}>
+
+                  {x.name}
+                  {x.movie}
+
+                  <button onClick={(e) => { deleteMovie(x.id) }}>Delete</button>
                 </div>
-                
+
               )
             })
           }
