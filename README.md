@@ -2,7 +2,7 @@
 
 ## Brief summary of the application
 
-## A * preset * variable is defined that contains dummy data related to films and actors
+## A *preset* variable is defined that contains dummy data related to films and actors
 
 ## When starting the application, the user is prompted for data.
 
